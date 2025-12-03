@@ -2,7 +2,7 @@ package DSAapnaCollege;
 
 public class LinkedList {
 	
-	public class Node{
+	public static class Node{
 		int data;
 		Node next;
 		public Node(int data) {
@@ -261,6 +261,61 @@ public class LinkedList {
 		
 		return true;
 	}
+	
+	
+	//check cycle exist or not 
+	public static boolean isCycle() {
+		
+		Node slow = head;
+		Node fast = head;
+		
+		while(fast != null && fast.next != null) {
+			
+			slow = slow.next;
+			fast = fast.next.next;
+			
+			if(slow == fast) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	
+	// remove cycle
+	
+	public static void removeCycle() {
+		Node slow = head;
+		Node fast = head;
+		boolean cycle = false;
+		
+		while(fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			
+			if(slow == fast) {
+				cycle = true;
+				break;
+			}
+		}
+		
+		if(cycle == false) {
+			return ;
+		}
+		
+		Node prev=null;
+		slow = head;
+		
+		while(slow != fast) {
+			prev = fast;
+			slow = slow.next;
+			fast =fast.next;
+			
+		}
+		
+		prev.next = null;
+	}
 	public static void main(String[] args) {
 		LinkedList l1 = new LinkedList();
 //		l1.addFirst(1);
@@ -279,10 +334,21 @@ public class LinkedList {
 //		System.out.println(l1.itrSearch(3));
 //		l1.reverse();
 //		l1.print();
-		l1.addFirst(1);
-		l1.addFirst(2);
-		l1.addFirst(2);
-		l1.print();
-		System.out.println(l1.checkPalindrome());
+//		l1.addFirst(1);
+//		l1.addFirst(2);
+//		l1.addFirst(2);
+//		l1.print();
+//		System.out.println(l1.checkPalindrome());
+		
+		head = new Node(1);
+		Node temp = new Node(2);
+		head.next = temp;
+		head.next.next = new Node(3); 
+		head.next.next.next = temp;
+		
+		System.out.println(isCycle());
+		removeCycle();
+		System.out.println(isCycle());
+		
 	}
 }
