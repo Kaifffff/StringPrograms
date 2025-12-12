@@ -1,15 +1,6 @@
-package StringPrograms;
+package StringArray;
 
-import java.util.ArrayList;
-
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-public class Practice {	
+public class LongestCommonPrefix {
 	public static void main(String []args) {
 		String str[] = {"flow","flew","flower"};
 		String pref = str[0];
@@ -21,5 +12,4 @@ public class Practice {
 		
 		System.out.println(pref);
 	}
-	
 }
