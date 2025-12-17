@@ -9,17 +9,21 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+class A{
+	
+}
+
+class B extends A{
+	
+}
+
+
+
 public class Practice {	
 	public static void main(String []args) {
-		String str[] = {"flow","flew","flower"};
-		String pref = str[0];
-		for(int i = 1 ; i < str.length ; i++) {
-			while(str[i].indexOf(pref) != 0) {
-				pref = pref.substring(0 , pref.length()-1 );
-			}
+		A obj = new A();
+		System.out.println(obj);
 		}
-		
-		System.out.println(pref);
-	}
 	
 }
