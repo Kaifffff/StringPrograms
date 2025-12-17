@@ -1,5 +1,10 @@
 package GreedyAlgorithmsProblems;
 
+//you are given n activities with their start and end times. select the maximum number of activities 
+//that can be performed by a single person, assuming that a person can only work on a single activity at a 
+//time.Activity are sorted according to end time
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
