@@ -61,7 +61,7 @@ public class SearchInBST {
 		if(search(root,6)) {
 			System.out.println("Found");
 		}else {
-			System.out.println("Nor Found");
+			System.out.println("Not Found");
 		}
 	}
 }
