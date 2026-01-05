@@ -52,7 +52,7 @@ public class IsValidBST {
 	}
 
 	public static void main(String []args) {
-		int values[] = {1,1,1,1};
+		int values[] = {8,5,3,1,4,6,10,11,14};
 		Node root = null;
 		
 		for(int i = 0 ; i < values.length ; i++) {
