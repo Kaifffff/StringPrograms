@@ -2,8 +2,6 @@ package binarySearchTree;
 
 import java.util.ArrayList;
 
-import binarySearchTree.SortedArrayToBalancedBST.Node;
-
 public class ConvertBSTToBalancedBST {
 	static class Node{
 		int data;
